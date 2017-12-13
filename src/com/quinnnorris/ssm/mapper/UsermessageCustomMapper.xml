@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.quinnnorris.ssm.mapper.UsermessageCustomMapper">
+
+    <select id="selectUserMessageByPhone" parameterType="UserMessageCustom" resultType="UserMessageCustom">
+        SELECT * FROM usermessage WHERE phone = #{phone}
+    </select>
+
+    <insert id="insertMessageByPhone" parameterType="UserMessageCustom">
+        INSERT INTO usermessage (phone,bgimage,local,school,sign) VALUE (#{phone},#{bgimage},#{local},#{school},#{sign})
+    </insert>
+
+    <update id="updateUserSchool" parameterType="UserMessageCustom">
+        update usermessage set school = #{school} where phone = #{phone}
+    </update>
+
+    <update id="updateUserLocal" parameterType="UserMessageCustom">
+        update usermessage set local = #{local} where phone = #{phone}
+    </update>
+
+    <update id="updateUserSign" parameterType="UserMessageCustom">
+        update usermessage set sign = #{sign} where phone = #{phone}
+    </update>
+
+    <update id="updateUserBgimage" parameterType="UserMessageCustom">
+        update usermessage set bgimage = #{bgimage} where phone = #{phone}
+    </update>
+
+
+</mapper>

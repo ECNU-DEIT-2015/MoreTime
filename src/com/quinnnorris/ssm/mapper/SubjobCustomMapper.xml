@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.quinnnorris.ssm.mapper.SubjobCustomMapper">
+
+    <insert id="insertSubjob" parameterType="SubjobCustom">
+        insert into subjob (pronumber,phone,dotimes,subinfo,pushperson,pushtime)
+        values (#{pronumber},#{phone},#{dotimes},#{subinfo},#{pushperson},#{pushtime})
+    </insert>
+
+    <select id="selectSubjobByPhonePronumber" parameterType="SubjobCustom" resultType="SubjobCustom">
+        select * from subjob WHERE phone = #{phone} AND pronumber = #{pronumber}
+    </select>
+
+    <select id="selectSubjobByPhonePronumberPerson" parameterType="SubjobCustom" resultType="SubjobCustom">
+        select * from subjob WHERE phone = #{phone} AND pronumber = #{pronumber} AND pushperson = #{pushperson}
+    </select>
+
+    <select id="selectpersoncountByPronumber" parameterType="SubjobCustom" resultType="SubjobCustom">
+        select SUM(dotimes) as alltimes,pushperson from subjob where pronumber = #{pronumber} group by pushperson
+    </select>
+
+    <select id="selectallcountByPronumber" parameterType="SubjobCustom" resultType="SubjobCustom">
+        select SUM(dotimes) as alltimes,pushperson from subjob where pronumber = #{pronumber}
+    </select>
+
+    <select id="selectSubjobByPhone" parameterType="SubjobCustom" resultType="SubjobCustom">
+        select * from subjob WHERE phone = #{phone}
+    </select>
+
+</mapper>

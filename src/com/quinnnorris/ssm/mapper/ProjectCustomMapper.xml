@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.quinnnorris.ssm.mapper.ProjectCustomMapper">
+
+    <insert id="insertPro" parameterType="ProjectCustom">
+        insert into project (phone,proname,info,pronumber,barcolor,types,begtime,endtime)
+        values (#{phone},#{proname},#{info},#{pronumber},#{barcolor},#{types},#{begtime},#{endtime})
+    </insert>
+
+    <select id="selectProByPhoneTypes" parameterType="ProjectCustom" resultType="ProjectCustom">
+        SELECT * FROM project WHERE phone = #{phone} AND types = #{types}
+    </select>
+
+    <select id="selectProByPronumber" parameterType="ProjectCustom" resultType="ProjectCustom">
+        SELECT * FROM project WHERE phone = #{phone} AND pronumber = #{pronumber}
+    </select>
+
+    <update id="updateTypesByPhone" parameterType="ProjectCustom">
+        update project set types = #{types}  where phone = #{phone} AND pronumber = #{pronumber};
+    </update>
+
+    <select id="selectProByPhone" parameterType="ProjectCustom" resultType="ProjectCustom">
+        SELECT * FROM project WHERE phone = #{phone}
+    </select>
+
+</mapper>

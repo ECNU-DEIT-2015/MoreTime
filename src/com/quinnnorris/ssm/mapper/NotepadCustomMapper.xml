@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.quinnnorris.ssm.mapper.NotepadCustomMapper">
+
+    <select id="selectNotByPhoneType" parameterType="NotepadCustom" resultType="NotepadCustom">
+        SELECT * FROM notepad WHERE phone = #{phone} AND types = #{types};
+    </select>
+
+    <select id="selectNotByPhoneTypeLimit" parameterType="NotepadCustom" resultType="NotepadCustom">
+        SELECT * FROM notepad WHERE phone = #{phone} AND types = #{types} limit #{startPos},#{pageSize};
+    </select>
+
+    <select id="selectNotByPhoneTitlesType" parameterType="NotepadCustom" resultType="NotepadCustom">
+        SELECT * FROM notepad WHERE phone = #{phone} AND types = #{types} AND titles = #{titles};
+    </select>
+
+    <insert id="insertNewNotepad" parameterType="NotepadCustom">
+        INSERT INTO notepad (fintime,phone,titles,inners,types) VALUE (#{fintime},#{phone},#{titles},#{inners},#{types})
+    </insert>
+
+    <update id="updateNotByPhoneTitlesType" parameterType="NotepadCustom">
+        UPDATE notepad SET types = #{types} WHERE phone = #{phone} AND titles = #{titles}
+    </update>
+
+</mapper>

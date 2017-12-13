@@ -1,0 +1,159 @@
+.qnpro {
+    margin-top: 460px;
+    width: 60%;
+}
+
+.qnproinner {
+    margin-left: 60%;
+    position: relative;
+    bottom: 70px;
+}
+
+.names {
+    margin-top: 30px;
+    margin-left: 500px;
+}
+
+.qnicon {
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+.qnediter {
+    width: 60%;
+}
+
+.qntabs {
+    float: left;
+    margin-left: 15px;
+    margin-top: 35px;
+    width: 57.7%;
+}
+
+.qnbuttondelete {
+    float: right;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.qntasks {
+    float: right;
+    width: 34%;
+    margin-top: 32px;
+    margin-right: 34px;
+}
+
+.qntasks .block-title {
+    margin-bottom: 23px;
+}
+
+.qnmyself .media{
+    margin-left: 5px;
+}
+
+.qnmyself .media-body {
+    padding-left: 5px;
+}
+
+.qnmyself .icon {
+    padding-top: 3px;
+}
+
+.qnfriend .media-body {
+    margin-top: 9px;
+}
+
+.qnsavenotepad {
+}
+
+.qnsavenote {
+}
+
+.qnediter .block-area{
+    height: 50px;
+}
+
+.qnediter .p-15 {
+    padding:0px !important;
+}
+
+.qntimeing {
+    float: left;
+    width: 40%;
+}
+
+.qnheightnot {
+    height: 330px !important;
+}
+
+.qncali .media, .media .media {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    height: 42.2px;
+}
+
+.qnfangk {
+    height: 241px;
+}
+
+.qnfank {
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.qnfank .form-group {
+    margin: 20px !important;
+}
+
+.qnfank .qn{
+    margin: 20px !important;
+    width: 96%;
+}
+
+.qnquas {
+    height: 250px !important;
+}
+
+.qnbigb .jumbotron{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+}
+
+.qnbigb #processs {
+    width: 10%;
+}
+
+.qnbigb #prosing {
+    width: 80%;
+    top: 4.4px;
+    position: relative;
+}
+
+.qnbhk div p , .qnbhk div h4 {
+    display: inline-block;
+}
+
+.qnallpro .media small {
+    display: block;
+}
+
+.qnchooseing {
+    margin: 40px;
+}
+
+.qnlist {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.qninfop {
+    margin-left: 130px;
+}
+
+.qnry input {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}

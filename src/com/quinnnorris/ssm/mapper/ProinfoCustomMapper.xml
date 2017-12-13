@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.quinnnorris.ssm.mapper.ProinfoCustomMapper">
+
+    <insert id="insertProinfo" parameterType="ProinfoCustom">
+        insert into proinfo (phone,pronumber,procount,persons,toteltimes)
+        values (#{phone},#{pronumber},#{procount},#{persons},#{toteltimes})
+    </insert>
+
+    <select id="selectProinfoByPhonePronumber" parameterType="ProinfoCustom" resultType="ProinfoCustom">
+        select * from proinfo WHERE phone = #{phone} AND pronumber = #{pronumber}
+    </select>
+
+</mapper>

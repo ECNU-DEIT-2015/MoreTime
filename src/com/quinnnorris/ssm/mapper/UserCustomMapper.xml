@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.quinnnorris.ssm.mapper.UserCustomMapper">
+
+    <select id="selectUserByPhoneAndPW" parameterType="UserCustom" resultType="UserCustom">
+        SELECT * FROM user WHERE phone = #{phone} AND password = #{password}
+    </select>
+
+    <select id="selectUserByPhone" parameterType="UserCustom" resultType="UserCustom">
+        SELECT * FROM user WHERE phone = #{phone}
+    </select>
+
+    <insert id="insertUserReturnId" useGeneratedKeys="true" keyProperty="id" parameterType="UserCustom">
+        INSERT INTO user (phone,password,username,headp,regtime,usertype) VALUE (#{phone},#{password},#{username},#{headp},#{regtime},#{usertype})
+    </insert>
+
+    <update id="updateUserLogintime" parameterType="UserCustom">
+        UPDATE user SET logintime = logintime + 1  WHERE phone = #{phone}
+    </update>
+
+    <update id="updateUserHeadp" parameterType="UserCustom">
+        UPDATE user SET headp = #{headp} WHERE phone = #{phone}
+    </update>
+
+    <update id="updateUserUsername" parameterType="UserCustom">
+        UPDATE user SET username = #{username} WHERE phone = #{phone}
+    </update>
+
+    <update id="updateUserUsertype" parameterType="UserCustom">
+        UPDATE user SET usertype = #{usertype} WHERE phone = #{phone}
+    </update>
+
+    <update id="updateUserPW" parameterType="UserCustom">
+        UPDATE user SET password = #{password} WHERE phone = #{phone}
+    </update>
+
+    <update id="updateUserEmail" parameterType="UserCustom">
+        UPDATE user SET email = #{email} WHERE phone = #{phone}
+    </update>
+
+
+</mapper>
